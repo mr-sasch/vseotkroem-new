@@ -276,6 +276,9 @@ window.onresize = () => drawLine();
     var tabsButtons = document.querySelectorAll('.tabs-btns__item');
     for (var w = 0; w < tabs.length; w++) {
       if (tabs[w] === menuA[i].parentNode.parentNode) {
+        for (var e = 0; e < tabs.length; e++) {
+          tabsButtons[e].classList.remove('active');
+        }
         tabsButtons[w].classList.add('active');
         tabs[w].classList.add('active');
         break;
@@ -283,5 +286,6 @@ window.onresize = () => drawLine();
     }
   };
   activeTabMenu();
+
 })();
 // /активный пункт меню

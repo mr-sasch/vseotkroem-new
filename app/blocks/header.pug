@@ -41,13 +41,13 @@ include mixins
       ul.tabs-btns
         mixin bynItem(txt, isActive)
           li.tabs-btns__item(class= isActive)= txt
-        +bynItem('Вскрытие дверей')
+        +bynItem('Вскрытие дверей', 'active')
         +bynItem('Вскрытие автомобилей')
         +bynItem('Вскрытие сейфов')
         +bynItem('Замена и ремонт замков')
       //- Табы услуг
       section.tabs-content
-        ul.tabs-content__tab
+        ul.tabs-content__tab.active
           li.tabs-content__tab-item
             a.tabs-content__tab-item-a(href='services-flats.html') Квартиры
           li.tabs-content__tab-item 
