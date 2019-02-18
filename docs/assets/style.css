@@ -375,6 +375,9 @@ body {
   opacity: 1;
   z-index: 20;
 }
+.tabs-content__tab-item {
+  text-align: center;
+}
 .tabs-content__tab-item-a {
   transition: 0.2s ease;
 }
