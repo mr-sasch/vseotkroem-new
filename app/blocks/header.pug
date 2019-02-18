@@ -41,40 +41,40 @@ include mixins
       ul.tabs-btns
         mixin bynItem(txt, isActive)
           li.tabs-btns__item(class= isActive)= txt
-        +bynItem('Вскрытие дверей', 'active')
+        +bynItem('Вскрытие дверей')
         +bynItem('Вскрытие автомобилей')
         +bynItem('Вскрытие сейфов')
         +bynItem('Замена и ремонт замков')
       //- Табы услуг
       section.tabs-content
-        ul.tabs-content__tab.active
+        ul.tabs-content__tab
           li.tabs-content__tab-item
-            a.tabs-content__tab-item-a(href='') Квартиры
+            a.tabs-content__tab-item-a(href='services-flats.html') Квартиры
           li.tabs-content__tab-item 
-            a.tabs-content__tab-item-a(href='') Офисы и склады
+            a.tabs-content__tab-item-a(href='services-offices.html') Офисы и склады
           li.tabs-content__tab-item 
-            a.tabs-content__tab-item-a(href='') Коттеджи и гаражи
+            a.tabs-content__tab-item-a(href='services-garages.html') Коттеджи и гаражи
         ul.tabs-content__tab
           li.tabs-content__tab-item 
-            a.tabs-content__tab-item-a(href='') Открытие дверей авто всех марок
+            a.tabs-content__tab-item-a(href='services-auto-doors.html') Открытие дверей авто всех марок
           li.tabs-content__tab-item 
-            a.tabs-content__tab-item-a(href='') Открытие багажников и капотов
+            a.tabs-content__tab-item-a(href='services-auto-baggage.html') Открытие багажников и капотов
           li.tabs-content__tab-item 
-            a.tabs-content__tab-item-a(href='') Зарядка АКБ и запуск авто
+            a.tabs-content__tab-item-a(href='services-auto-akb.html') Зарядка АКБ и запуск авто
         ul.tabs-content__tab
           li.tabs-content__tab-item 
-            a.tabs-content__tab-item-a(href='') Вскрытие любых сейфов
+            a.tabs-content__tab-item-a(href='services-safe-unlock.html') Вскрытие любых сейфов
           li.tabs-content__tab-item 
-            a.tabs-content__tab-item-a(href='') Замена и ремонт сейфовых замков
+            a.tabs-content__tab-item-a(href='services-safe-repair.html') Замена и ремонт сейфовых замков
           li.tabs-content__tab-item 
-            a.tabs-content__tab-item-a(href='') Изготовление ключей для сейфов
+            a.tabs-content__tab-item-a(href='services-safe-keys.html') Изготовление ключей для сейфов
         ul.tabs-content__tab
           li.tabs-content__tab-item 
-            a.tabs-content__tab-item-a(href='') Замена дверных замков
+            a.tabs-content__tab-item-a(href='services-doorslock-replacement.html') Замена дверных замков
           li.tabs-content__tab-item 
-            a.tabs-content__tab-item-a(href='') Ремонт замков и дверей
+            a.tabs-content__tab-item-a(href='services-doorslock-repair.html') Ремонт замков и дверей
           li.tabs-content__tab-item 
-            a.tabs-content__tab-item-a(href='') Большой выбор замков
+            a.tabs-content__tab-item-a(href='services-doorslock-choice.html') Большой выбор замков
     //- Мобильные табы
     section.mobile-tabs
       //- все табы

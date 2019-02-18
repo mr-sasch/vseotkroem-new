@@ -256,5 +256,32 @@ window.onresize = () => drawLine();
     }
   };
   activeMobileMenu();
+
+  // Табы
+  var activeTabMenu = () => {
+    var currentUrl = window.location.pathname.split('/'),
+    menuA = document.querySelectorAll('.tabs-content__tab-item-a'),
+    menuAlength = menuA.length;
+    outer: for (var i = 0; i < menuAlength; i++) {
+      for (var q = 0; q < currentUrl.length; q++) {
+        if (currentUrl[q] === menuA[i].getAttribute('href')) {
+          menuA[i].classList.add('active');
+          break outer;
+          break;
+        }
+      }
+    };
+
+    var tabs = document.querySelectorAll('.tabs-content__tab');
+    var tabsButtons = document.querySelectorAll('.tabs-btns__item');
+    for (var w = 0; w < tabs.length; w++) {
+      if (tabs[w] === menuA[i].parentNode.parentNode) {
+        tabsButtons[w].classList.add('active');
+        tabs[w].classList.add('active');
+        break;
+      }
+    }
+  };
+  activeTabMenu();
 })();
 // /активный пункт меню
