@@ -37,22 +37,22 @@ if (mainContainer) {
   mainContainer.onclick = (e) => {
     var target = e.target;
     if (!target.classList.contains('mobile-tabs-btns__item-ttl')) return ;
-    if (target.parentNode.classList.contains('active')) {
+    if (target.parentNode.classList.contains('hideShow')) {
       for (var i = 0; i < tabsBtnsLength; i++) {
         if (target === tabsBtnsTtl[i]) {
-          tabsBtns[i].classList.remove('active');
+          tabsBtns[i].classList.remove('hideShow');
           wrappers[i].style.height = '0px';
           return ;
         }
       };
     };
     for (var i = 0; i < tabsBtnsLength; i++) {
-      tabsBtns[i].classList.remove('active');
+      tabsBtns[i].classList.remove('hideShow');
       wrappers[i].style.height = '0px';
     };
     for (var i = 0; i < tabsBtnsLength; i++) {
       if (target === tabsBtnsTtl[i]) {
-        tabsBtns[i].classList.add('active');
+        tabsBtns[i].classList.add('hideShow');
         wrappers[i].style.height = listItems[i].offsetHeight + 'px';
       }
     };
@@ -286,6 +286,26 @@ window.onresize = () => drawLine();
     }
   };
   activeTabMenu();
+
+  // Табы - Мобильные
+  var activeTabMenuMobile = () => {
+    var currentUrl = window.location.pathname.split('/'),
+    menuA = document.querySelectorAll('.mobile-tabs-content__tab-item-a'),
+    menuAlength = menuA.length;
+    outer: for (var i = 0; i < menuAlength; i++) {
+      for (var q = 0; q < currentUrl.length; q++) {
+        if (currentUrl[q] === menuA[i].getAttribute('href')) {
+          menuA[i].classList.add('active');
+          break outer;
+          break;
+        }
+      }
+    };
+
+    var tabActive = document.querySelector('.mobile-tabs-content__tab-item-a.active');
+    tabActive.parentNode.parentNode.parentNode.parentNode.classList.add('active');
+  };
+  activeTabMenuMobile();
 
 })();
 // /активный пункт меню
