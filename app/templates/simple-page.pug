@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible" content="ie=edge")
+    link(rel="shortcut icon" type="image/png" href="images/favicon.png")
+    title Document
+    // JQuery 
+    script(src="https://code.jquery.com/jquery-3.3.1.min.js")
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js")
+    // Bootstrap 
+    link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css") 
+    // FontAwesome 
+    //- link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css") 
+    // Стили 
+    link(rel='stylesheet' type='text/css' href='assets/style.css')
+    // Шрифты
+    link(href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&amp;subset=cyrillic" rel="stylesheet")
+  body
+    //- Подключаем миксины
+    include ../blocks/mixins
+    // Header
+    block header
+    // Content
+    //- Здесь контент страницы -//
+    block content
+    
+    //- Остались вопросы?
+    section.any-questions
+      .container
+        header.any-questions__header ОСТАЛИСЬ ВОПРОСЫ? НАПИШИТЕ НАМ И МЫ ВАМ ПЕРЕЗВОНИМ!
+        button.any-questions__button(data-toggle='modal' data-target='#callBack') Заказать звонок            
+    //- /Остались вопросы?
+    
+    block seoText
+    
+    //- Обратная связь
+    section.footer__form
+      .container
+        .row
+          .col-12.col-md-6
+          .col-12.col-md-6.d-flex.justify-content-center.justify-content-md-start
+            form.form
+              input.form__input(placeholder='ИМЯ')
+              input.form__input(placeholder='EMAIL')
+              textarea.form__textarea(placeholder='Введите текст')
+              input.form__submit(type='submit' value='Отправить')
+    //- /Обратная связь
+    
+    
+    
+    // Footer 
+    include ../blocks/footer

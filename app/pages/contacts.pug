@@ -1,0 +1,24 @@
+extends ../templates/simple-page
+
+block header
+  header.header.header-main
+    include contacts-header
+
+block content
+  section.simple-page-content
+    .container
+      .row.flex-column-reverse.flex-md-row
+        .col-12.col-md-6
+          iframe.adress-frame(src="https://yandex.by/map-widget/v1/-/CBFNJEgeCD" width="100%" height="100%" frameborder="1" allowfullscreen="true")
+        .col-12.col-md-6.mb-4.mb-md-0
+          +titleStrokeRight('Контакты')
+          section.adress
+            mixin adress(ttl, txt)
+              article.adress__article.d-flex.flex-row.flex-wrap
+                header.adress__article-header= ttl
+                p.adress__article-p= txt
+            +adress('Email:', 'zamokvscroem@mail.ru')
+            +adress('Телефон:', '8 (029) 123 45 67')
+            +adress('Адрес:', 'Минск, ул.Красная д.11')
+            +adress('Режим работы:', 'с 8:00 до 20:00')
+            p.adress__text Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке. Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев 

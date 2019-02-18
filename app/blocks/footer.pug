@@ -1,0 +1,18 @@
+include mixins
+
+footer.site-footer
+  .container
+    .row.d-flex.justify-content-center
+      //- Нав меню в футере
+      .footer__nav
+        +navMenu()
+      //- /Нав меню в футере
+  //- Разделитель
+  .footer__separ  
+  //- /Разделитель
+  .container
+    .footer__bottom
+      p.header-main-utp__p 8 (029) 123 45 67
+      button.utp-button(data-toggle='modal' data-target='#callMaster') Вызвать мастера
+  include modals
+script(src='assets/script.js' defer)

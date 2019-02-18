@@ -1,0 +1,308 @@
+// Header
+.header
+  color #fff
+  padding 30px 0
+
+  // Основное меню
+.nav
+  font-size 18px
+  font-weight bold
+  text-transform uppercase
+  display -webkit-flex
+  display -ms-flex
+  display flex
+  justify-content space-between
+
+.nav__item
+  cursor pointer
+
+.nav__item a
+  text-align center
+  display block
+  padding 3px 12px
+  margin 0 20px
+  border 2px solid transparent
+  border-radius 10px
+  trs2()
+
+.nav__item:hover a,
+.nav__item.active a
+  border-color navColorGreen
+  color navColorGreen
+  // /Основное меню
+
+  // Мобильное меню
+.nav-mobile
+  position absolute
+  z-index 100
+  top 100px
+  left 50%
+  transform translateX(-50%)
+  width 100%
+  max-width 300px
+
+.nav-mobile__item.active
+  .nav-mobile__item-a
+    color navColorGreen  
+
+.nav-mobile__item-a
+  display block
+  font-size 20px
+  font-weight bold
+  background-color #cdcdcd
+  color #000
+  padding 20px
+  margin-bottom 2px
+
+.nav-mobile__item:first-child
+  .nav-mobile__item-a
+    border-top-left-radius 10px
+    border-top-right-radius 10px
+.nav-mobile__item:last-child
+  .nav-mobile__item-a
+    border-bottom-left-radius 10px
+    border-bottom-right-radius 10px
+
+.nav-mobile-wrapper
+  display none
+  position fixed
+  top 0
+  left 0
+  width 100%
+  height 100%
+  background-color rgba(#000000, 0.7)
+  opacity 0
+  z-index -1
+  trs2()
+@media screen and (max-width 768px)
+  .nav-mobile-wrapper
+    display block
+  .nav-desktop
+    display none
+.nav-mobile-wrapper.active
+  opacity 1
+  z-index 100
+
+.nav-mobile__label
+  display none
+  position absolute
+  top 10px
+  right 10px
+  width 70px
+  height 70px
+  border 1px solid #fff
+  border-radius 5px
+  z-index 100
+  background-color #383838
+@media screen and (max-width 768px)
+  .nav-mobile__label
+    display block
+
+.nav-mobile__label-stroke
+  height 2px
+  width 50px
+  background-color #fff
+  position absolute
+  left 50%
+  transform translateX(-50%)
+  trs2()
+
+.nav-mobile__label-stroke-1
+  top 25%
+  left 50%
+  transform translateX(-50%)
+.nav-mobile__label-stroke-2
+  top 50%
+  left 50%
+  transform translate(-50%, -50%)
+.nav-mobile__label-stroke-3
+  bottom 25%
+  left 50%
+  transform translateX(-50%)
+
+.nav-mobile__label.active
+  position fixed
+  .nav-mobile__label-stroke-1
+    transform translate(-50%, -50%) rotate(45deg)
+    top 50%
+  .nav-mobile__label-stroke-2
+    transform translate(-50%, -50%) rotate(90deg)
+    opacity 0
+  .nav-mobile__label-stroke-3
+    transform translate(-50%, -50%) rotate(135deg)
+    top 50%
+  // /Мобильное меню
+
+  // Кнопка "Вверх"
+.scroll-top
+  position fixed
+  bottom 15px
+  right 15px
+  background transparent
+  border 2px solid navColorGreen
+  border-radius 5px
+  height 40px
+  width 40px
+  opacity 0
+  z-index -1
+  trs2()
+.scroll-top:hover
+  background #fff
+.scroll-top:after
+  content ''
+  position absolute
+  height 14px
+  width 14px
+  border-left 2px solid navColorGreen
+  border-top 2px solid navColorGreen
+  top 60%
+  left 50%
+  transform translate(-50%,-50%) rotate(45deg)
+  // /Кнопка "Вверх"
+
+  // Logo
+.header__logo
+  text-align center
+.header__logo-img
+  margin 30px 0
+  width 100%
+  max-width 300px
+  // /Logo
+
+  // Табы
+.tabs
+  width 100%
+  max-width 970px
+
+.tabs-btns
+  display -webkit-flex
+  display -ms-flex
+  display flex
+  justify-content space-between
+
+.tabs-btns__item
+  background-color #cdcdcd
+  color #000
+  font-size 20px
+  font-weight bold
+  border-top-left-radius 10px
+  border-top-right-radius 10px
+  padding 10px 30px
+  text-align center
+  display -webkit-flex
+  display -ms-flex
+  display flex
+  align-items center
+  justify-content center
+  margin-right 5px
+  line-height 1.2
+  cursor pointer
+  trs2()
+  width 100%
+.tabs-btns__item:last-child
+  margin-right 0
+.tabs-btns__item:hover
+.tabs-btns__item.active
+  background-color navColorGreen
+
+.tabs-content
+  position relative
+  margin-bottom 70px
+  display -webkit-flex
+  display -ms-flex
+  display flex
+  justify-content center
+
+.tabs-content__tab
+  display -webkit-flex
+  display -ms-flex
+  display flex
+  position absolute
+  justify-content space-around
+  top 0
+  left 0
+  width 100%
+  opacity 0
+  z-index 10
+  trs2()
+  border-bottom-left-radius 10px
+  border-bottom-right-radius 10px
+  background-color #202020
+  padding 20px 0
+  font-size 20px
+  font-weight bold
+  text-transform uppercase
+
+.tabs-content__tab.active
+  opacity 1
+  z-index 20
+
+.tabs-content__tab-item-a
+  trs2()
+
+.tabs-content__tab-item-a:hover,
+.tabs-content__tab-item-a.active
+  color navColorGreen
+
+  // /Табы
+  // Мобильные табы
+.mobile-tabs
+  display none
+  margin 0 10px
+
+.mobile-tabs-btns__item
+  color #000
+  font-size 20px
+  font-weight bold
+  margin-bottom 2px
+  overflow hidden
+.mobile-tabs-btns__item:first-child
+  border-top-left-radius 10px
+  border-top-right-radius 10px
+.mobile-tabs-btns__item:last-child
+  border-bottom-left-radius 10px
+  border-bottom-right-radius 10px
+  margin-bottom 0
+
+.mobile-tabs-btns__item-ttl
+  background-color #cdcdcd
+  display block
+  padding 20px
+  trs2()
+  cursor pointer
+.active
+  .mobile-tabs-btns__item-ttl
+    background-color navColorGreen
+
+.mobile-tabs-content__tab-item
+  background-color #000
+  margin 1px 0
+.mobile-tabs-content__tab-item:last-child
+  margin-bottom 0
+
+.mobile-tabs-content__tab-item-a
+  color #cdcdcd !important
+  padding 20px
+  display block
+
+.mobile-tabs-content__tab-wrapper
+  height 0
+  overflow hidden
+  trs2()
+  // /Мобильные табы
+
+  // Адаптация
+@media screen and (max-width 768px)
+  .nav__item a
+    margin-top 10px
+    margin-bottom 10px
+
+@media screen and (max-width 768px)
+  .mobile-tabs
+    display block
+  .tabs
+    display none
+
+  // /Адаптация
+
+// /Header

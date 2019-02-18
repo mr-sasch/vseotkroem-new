@@ -1,0 +1,72 @@
+extends ../templates/simple-page.pug
+
+block header
+  header.header.header-main
+    include main-header
+
+block content
+  section.why-us
+    .container
+      +titleStrokeCenter('Почему мы?')
+      .section.why-us__item
+        .why-us-item__row
+          .row.d-flex.align-items-center
+            .d-none.d-sm-flex.justify-content-end.pr-2.pr-md-4.pr-lg-5.col-sm-2
+              .why-us__item-number 1
+            .col-12.col-sm-10
+              .why-us__item-article
+                h1.why-us__item-article-header-h1 Комплексный подход
+                p.why-us__item-article-p Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке
+        .why-us-item__row
+          .row.d-flex.align-items-center 
+            .d-none.d-sm-flex.justify-content-end.pr-2.pr-md-4.pr-lg-5.col-sm-3
+              .why-us__item-number 2
+            .col-12.col-sm-9
+              .why-us__item-article
+                h1.why-us__item-article-header-h1 Профессионализм
+                p.why-us__item-article-p Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке
+        .why-us-item__row
+          .row.d-flex.align-items-center
+            .d-none.d-sm-flex.justify-content-end.pr-2.pr-md-4.pr-lg-5.col-sm-2
+              .why-us__item-number 3
+            .col-12.col-sm-10
+              .why-us__item-article
+                h1.why-us__item-article-header-h1 Соблюдение законодательства
+                p.why-us__item-article-p Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке
+        .why-us-item__row
+          .row.d-flex.align-items-center
+            .d-none.d-sm-flex.justify-content-end.pr-2.pr-md-4.pr-lg-5.col-sm-3
+              .why-us__item-number 4
+            .col-12.col-sm-9
+              .why-us__item-article
+                h1.why-us__item-article-header-h1 Срочный приезд за 15 минут
+                p.why-us__item-article-p Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке
+              
+  section.main-prices
+    .container
+      +titleStrokeCenter('Цены')
+      .main-prices-item_row
+        .row
+          mixin mainPricesItem(header, img, footer)
+            .col-12.col-md-6.col-lg-3
+              section.main-prices-item
+                header.main-prices-item__header= header
+                img.main-prices-item__img(src= img)
+                footer.main-prices-item__footer= footer
+                .main-prices-item__button-wrapper
+                  button.main-prices-item__button Подробнее
+          +mainPricesItem('Вскрытие отечественного звонка', 'images/main-prices.png', 'от 20 рублей')
+          +mainPricesItem('Вскрытие отечественного звонка', 'images/main-prices.png', 'от 20 рублей')
+          +mainPricesItem('Вскрытие отечественного звонка', 'images/main-prices.png', 'от 20 рублей')
+          +mainPricesItem('Вскрытие отечественного звонка', 'images/main-prices.png', 'от 20 рублей')
+block seoText
+  section.seo-text
+    .container
+      article
+        header
+          +titleStrokeCenter('Заголовок статьи')
+        img.seo-text__img(src='images/main-article-key.png')
+        section.seo-text__text
+          p Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. При создании генератора мы использовали небезизвестный универсальный код речей. Текст генерируется абзацами случайным образом от двух до десяти предложений в абзаце, что позволяет сделать текст более привлекательным и живым для визуально-слухового восприятия.
+          p По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает у некторых людей недоумение при попытках прочитать рыбу текст. В отличии от lorem ipsum, текст рыба на русском языке наполнит любой макет непонятным смыслом ипридаст неповторимый колорит советских времен.
+      

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
+    <title>Document</title>
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"/>
+    <!-- FontAwesome -->
+    <!-- Стили -->
+    <link rel="stylesheet" type="text/css" href="assets/style.css"/>
+    <!-- Шрифты-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&amp;amp;subset=cyrillic" rel="stylesheet"/>
+  </head>
+  <body>
+    <!-- Header-->
+    <header class="header header-main">
+      <div class="container">
+        <div class="nav-mobile-wrapper">
+          <nav class="nav-mobile">
+            <ul>
+                            <li class="nav-mobile__item"><a class="nav-mobile__item-a" href="main.html">Главная</a></li>
+                            <li class="nav-mobile__item"><a class="nav-mobile__item-a" href="services.html">Услуги</a></li>
+                            <li class="nav-mobile__item"><a class="nav-mobile__item-a" href="prices.html">Цены</a></li>
+                            <li class="nav-mobile__item"><a class="nav-mobile__item-a" href="contacts.html">Контакты</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="nav-mobile__label">
+          <div class="nav-mobile__label-stroke nav-mobile__label-stroke-1"></div>
+          <div class="nav-mobile__label-stroke nav-mobile__label-stroke-2"></div>
+          <div class="nav-mobile__label-stroke nav-mobile__label-stroke-3"></div>
+        </div>
+        <button class="scroll-top"> </button>
+        <div class="d-flex justify-content-center">
+          <div class="nav-desktop">
+                  <ul class="nav d-flex flex-column flex-sm-row">
+                            <li class="nav__item"><a class="nav__item-a" href="main.html">Главная</a></li>
+                            <li class="nav__item"><a class="nav__item-a" href="services.html">Услуги</a></li>
+                            <li class="nav__item"><a class="nav__item-a" href="prices.html">Цены</a></li>
+                            <li class="nav__item"><a class="nav__item-a" href="contacts.html">Контакты</a></li>
+                  </ul>
+          </div>
+        </div>
+        <section class="header__logo"><img class="header__logo-img" src="images/logo300.png"/></section>
+        <h1 class="page-title">
+                <div class="title-stroke-center">
+                  <h1 class="title-stroke-center__h1">Цены</h1>
+                </div>
+        </h1>
+        <div class="d-flex justify-content-center">
+          <section class="tabs">
+            <ul class="tabs-btns">
+                            <li class="tabs-btns__item active">Вскрытие дверей</li>
+                            <li class="tabs-btns__item">Вскрытие автомобилей</li>
+                            <li class="tabs-btns__item">Вскрытие сейфов</li>
+                            <li class="tabs-btns__item">Замена и ремонт замков</li>
+            </ul>
+            <section class="tabs-content">
+              <ul class="tabs-content__tab active">
+                <li class="tabs-content__tab-item"><a class="tabs-content__tab-item-a" href="">Квартиры</a></li>
+                <li class="tabs-content__tab-item"> <a class="tabs-content__tab-item-a" href="">Офисы и склады</a></li>
+                <li class="tabs-content__tab-item"> <a class="tabs-content__tab-item-a" href="">Коттеджи и гаражи</a></li>
+              </ul>
+              <ul class="tabs-content__tab">
+                <li class="tabs-content__tab-item"> <a class="tabs-content__tab-item-a" href="">Замки</a></li>
+                <li class="tabs-content__tab-item"> <a class="tabs-content__tab-item-a" href="">Двери и багажники</a></li>
+                <li class="tabs-content__tab-item"> <a class="tabs-content__tab-item-a" href="">Вскрытие капотов</a></li>
+              </ul>
+              <ul class="tabs-content__tab">
+                <li class="tabs-content__tab-item"> <a class="tabs-content__tab-item-a" href="">С деньгами</a></li>
+                <li class="tabs-content__tab-item"> <a class="tabs-content__tab-item-a" href="">С ценными бумагами</a></li>
+                <li class="tabs-content__tab-item"> <a class="tabs-content__tab-item-a" href="">С забытыми внутри ключами</a></li>
+              </ul>
+              <ul class="tabs-content__tab">
+                <li class="tabs-content__tab-item"> <a class="tabs-content__tab-item-a" href="">Квартирных</a></li>
+                <li class="tabs-content__tab-item"> <a class="tabs-content__tab-item-a" href="">Уличных</a></li>
+                <li class="tabs-content__tab-item"> <a class="tabs-content__tab-item-a" href="">Межкомнатных</a></li>
+              </ul>
+            </section>
+          </section>
+          <section class="mobile-tabs">
+            <ul class="mobile-tabs-btns">
+              <li class="mobile-tabs-btns__item"> <span class="mobile-tabs-btns__item-ttl">Вскрытие дверей</span>
+                <div class="mobile-tabs-content__tab-wrapper">
+                  <ul class="mobile-tabs-content__tab">
+                    <li class="mobile-tabs-content__tab-item"><a class="mobile-tabs-content__tab-item-a" href="">Квартиры</a></li>
+                    <li class="mobile-tabs-content__tab-item"> <a class="mobile-tabs-content__tab-item-a" href="">Офисы и склады</a></li>
+                    <li class="mobile-tabs-content__tab-item"> <a class="mobile-tabs-content__tab-item-a" href="">Коттеджи и гаражи</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="mobile-tabs-btns__item"><span class="mobile-tabs-btns__item-ttl">Вскрытие автомобилей</span>
+                <div class="mobile-tabs-content__tab-wrapper">
+                  <ul class="mobile-tabs-content__tab">
+                    <li class="mobile-tabs-content__tab-item"> <a class="mobile-tabs-content__tab-item-a" href="">Замки</a></li>
+                    <li class="mobile-tabs-content__tab-item"> <a class="mobile-tabs-content__tab-item-a" href="">Двери и багажники</a></li>
+                    <li class="mobile-tabs-content__tab-item"> <a class="mobile-tabs-content__tab-item-a" href="">Вскрытие капотов</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="mobile-tabs-btns__item"><span class="mobile-tabs-btns__item-ttl">Вскрытие сейфов</span>
+                <div class="mobile-tabs-content__tab-wrapper">
+                  <ul class="mobile-tabs-content__tab">
+                    <li class="mobile-tabs-content__tab-item"> <a class="mobile-tabs-content__tab-item-a" href="">С деньгами</a></li>
+                    <li class="mobile-tabs-content__tab-item"> <a class="mobile-tabs-content__tab-item-a" href="">С ценными бумагами</a></li>
+                    <li class="mobile-tabs-content__tab-item"> <a class="mobile-tabs-content__tab-item-a" href="">С забытыми внутри ключами</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="mobile-tabs-btns__item"><span class="mobile-tabs-btns__item-ttl">Замена и ремонт замков</span>
+                <div class="mobile-tabs-content__tab-wrapper">
+                  <ul class="mobile-tabs-content__tab">
+                    <li class="mobile-tabs-content__tab-item"> <a class="mobile-tabs-content__tab-item-a" href="">Квартирных</a></li>
+                    <li class="mobile-tabs-content__tab-item"> <a class="mobile-tabs-content__tab-item-a" href="">Уличных</a></li>
+                    <li class="mobile-tabs-content__tab-item"> <a class="mobile-tabs-content__tab-item-a" href="">Межкомнатных</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </header>
+    <!-- Content-->
+    <section class="simple-page-content">
+      <div class="container">
+              <div class="title-stroke-center">
+                <h1 class="title-stroke-center__h1">Цены</h1>
+              </div>
+        <p class="simple-page-content__p">Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях.</p>
+        <section class="prices">
+          <div class="container">
+            <header>
+              <div class="row prices__header">             
+                <div class="col-6 col-sm-4">
+                  <div class="prices__header-ttl">Услуга</div>
+                </div>
+                <div class="col-6 col-sm-4">
+                  <div class="prices__header-value">Цена</div>
+                </div>
+              </div>
+            </header>
+            <article class="prices__values">
+                            <div class="row d-flex align-items-center prices__values-row">                 
+                              <div class="col-6 col-sm-4">
+                                <div class="prices__values-ttl">Вскрытие дверей</div>
+                              </div>
+                              <div class="col-6 col-sm-4">
+                                <div class="prices__values-value">20 руб.</div>
+                              </div>
+                              <div class="col-12 col-sm-4 text-center text-sm-right mt-2 mt-sm-0">
+                                <button class="prices__values-btn" data-toggle="modal" data-target="#callMaster">Вызвать мастера</button>
+                              </div>
+                            </div>
+                            <div class="row d-flex align-items-center prices__values-row">                 
+                              <div class="col-6 col-sm-4">
+                                <div class="prices__values-ttl">Офисы и склады</div>
+                              </div>
+                              <div class="col-6 col-sm-4">
+                                <div class="prices__values-value">20 руб.</div>
+                              </div>
+                              <div class="col-12 col-sm-4 text-center text-sm-right mt-2 mt-sm-0">
+                                <button class="prices__values-btn" data-toggle="modal" data-target="#callMaster">Вызвать мастера</button>
+                              </div>
+                            </div>
+                            <div class="row d-flex align-items-center prices__values-row">                 
+                              <div class="col-6 col-sm-4">
+                                <div class="prices__values-ttl">Коттеджи и гаражи</div>
+                              </div>
+                              <div class="col-6 col-sm-4">
+                                <div class="prices__values-value">20 руб.</div>
+                              </div>
+                              <div class="col-12 col-sm-4 text-center text-sm-right mt-2 mt-sm-0">
+                                <button class="prices__values-btn" data-toggle="modal" data-target="#callMaster">Вызвать мастера</button>
+                              </div>
+                            </div>
+                            <div class="row d-flex align-items-center prices__values-row">                 
+                              <div class="col-6 col-sm-4">
+                                <div class="prices__values-ttl">Вскрытие дверей</div>
+                              </div>
+                              <div class="col-6 col-sm-4">
+                                <div class="prices__values-value">20 руб.</div>
+                              </div>
+                              <div class="col-12 col-sm-4 text-center text-sm-right mt-2 mt-sm-0">
+                                <button class="prices__values-btn" data-toggle="modal" data-target="#callMaster">Вызвать мастера</button>
+                              </div>
+                            </div>
+                            <div class="row d-flex align-items-center prices__values-row">                 
+                              <div class="col-6 col-sm-4">
+                                <div class="prices__values-ttl">Офисы и склады</div>
+                              </div>
+                              <div class="col-6 col-sm-4">
+                                <div class="prices__values-value">20 руб.</div>
+                              </div>
+                              <div class="col-12 col-sm-4 text-center text-sm-right mt-2 mt-sm-0">
+                                <button class="prices__values-btn" data-toggle="modal" data-target="#callMaster">Вызвать мастера</button>
+                              </div>
+                            </div>
+                            <div class="row d-flex align-items-center prices__values-row">                 
+                              <div class="col-6 col-sm-4">
+                                <div class="prices__values-ttl">Коттеджи и гаражи</div>
+                              </div>
+                              <div class="col-6 col-sm-4">
+                                <div class="prices__values-value">20 руб.</div>
+                              </div>
+                              <div class="col-12 col-sm-4 text-center text-sm-right mt-2 mt-sm-0">
+                                <button class="prices__values-btn" data-toggle="modal" data-target="#callMaster">Вызвать мастера</button>
+                              </div>
+                            </div>
+            </article>
+          </div>
+        </section>
+      </div>
+    </section>
+    <section class="any-questions">
+      <div class="container">
+        <header class="any-questions__header">ОСТАЛИСЬ ВОПРОСЫ? НАПИШИТЕ НАМ И МЫ ВАМ ПЕРЕЗВОНИМ!</header>
+        <button class="any-questions__button" data-toggle="modal" data-target="#callBack">Заказать звонок            </button>
+      </div>
+    </section>
+    <section class="footer__form">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-6"></div>
+          <div class="col-12 col-md-6 d-flex justify-content-center justify-content-md-start">
+            <form class="form">
+              <input class="form__input" placeholder="ИМЯ"/>
+              <input class="form__input" placeholder="EMAIL"/>
+              <textarea class="form__textarea" placeholder="Введите текст"></textarea>
+              <input class="form__submit" type="submit" value="Отправить"/>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row d-flex justify-content-center">
+          <div class="footer__nav">
+                <ul class="nav d-flex flex-column flex-sm-row">
+                        <li class="nav__item"><a class="nav__item-a" href="main.html">Главная</a></li>
+                        <li class="nav__item"><a class="nav__item-a" href="services.html">Услуги</a></li>
+                        <li class="nav__item"><a class="nav__item-a" href="prices.html">Цены</a></li>
+                        <li class="nav__item"><a class="nav__item-a" href="contacts.html">Контакты</a></li>
+                </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer__separ"> </div>
+      <div class="container">
+        <div class="footer__bottom">
+          <p class="header-main-utp__p">8 (029) 123 45 67</p>
+          <button class="utp-button" data-toggle="modal" data-target="#callMaster">Вызвать мастера</button>
+        </div>
+      </div>
+      <!-- Модальные окна-->
+      <!-- Вызвать мастера-->
+      <div class="modal fade" id="callMaster" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Вызов мастера</h5>
+              <button class="close" data-dismiss="modal" aria-label="close"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+              <form class="call-master-form">
+                <input class="call-master-form__input" name="call-master-name" type="text" placeholder="Ваше имя"/>
+                <input class="call-master-form__input" name="call-master-phone" type="text" placeholder="Телефон"/>
+                <input class="call-master-form__input" name="call-master-address" type="text" placeholder="Адрес"/>
+                <textarea class="call-master-form__textarea" name="call-master-ext" placeholder="Опишите, что случилось"></textarea>
+                <div class="call-master-form__submit">
+                  <input class="utp-button" type="submit" value="Вызвать мастера"/>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /Вызвать мастера-->
+      <!-- Заказать звонок-->
+      <div class="modal fade" id="callBack" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Заказать звонок</h5>
+              <button class="close" data-dismiss="modal" aria-label="close"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+              <form class="call-master-form">
+                <input class="call-master-form__input" name="call-master-name" type="text" placeholder="Ваше имя"/>
+                <input class="call-master-form__input" name="call-master-phone" type="text" placeholder="Телефон"/>
+                <div class="call-back-form__submit">
+                  <input class="any-questions__button" type="submit" value="Заказать звонок"/>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /Заказать звонок-->
+      <!-- /Модальные окна-->
+    </footer>
+    <script src="assets/script.js" defer="defer"></script>
+  </body>
+</html>

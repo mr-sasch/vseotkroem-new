@@ -1,0 +1,19 @@
+extends ../templates/simple-page
+
+block header
+  header.header.header-main
+    include services-header
+
+block content
+  section.simple-page-content
+    .container
+      .row
+        .col-12.col-md-5.col-lg-4.text-center.mb-4
+          figure.services__figure
+            img.services__img(src='images/services-text-img.jpg')
+            figcaption.services__phone 8 (029) 123 45 67
+          button.services__button Вызвать мастера
+        .col-12.col-md-7.col-lg-8
+          header
+            +titleStrokeRight('Офисы и склады')
+            p.services__text Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. При создании генератора мы использовали небезизвестный. Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. При создании генератора мы использовали небезизвестный 

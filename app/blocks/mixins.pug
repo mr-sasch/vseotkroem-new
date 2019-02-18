@@ -1,0 +1,27 @@
+//- Навигационное меню
+mixin navMenu()
+  //- Нав меню основное
+  ul.nav.d-flex.flex-column.flex-sm-row
+    mixin navItem(href, title, isActive)
+      li.nav__item(class= isActive)
+        a.nav__item-a(href= href)= title
+    +navItem('main.html', 'Главная')
+    +navItem('services.html', 'Услуги')
+    +navItem('prices.html', 'Цены')
+    +navItem('contacts.html', 'Контакты')
+  //- /Нав меню основное
+
+  //- Заголовок зачеркнутый. Центр
+mixin titleStrokeCenter(ttl)
+  .title-stroke-center
+    h1.title-stroke-center__h1= ttl  
+  //- /Заголовок зачеркнутый. Центр
+
+  //- Заголовок зачеркнутый. Справа
+mixin titleStrokeRight(ttl)
+  .title-stroke-right
+    h1.title-stroke-right__h1= ttl  
+  //- /Заголовок зачеркнутый. Справа
+
+//- /Навигационное меню
+  

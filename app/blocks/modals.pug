@@ -1,0 +1,37 @@
+// Модальные окна
+// Вызвать мастера
+.modal.fade#callMaster(tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true")
+  .modal-dialog
+    .modal-content
+      .modal-header
+        h5.modal-title Вызов мастера
+        button.close(data-dismiss='modal' aria-label='close')
+          span(aria-hidden='true') &times;
+      .modal-body
+        form.call-master-form
+          input.call-master-form__input(name='call-master-name' type='text' placeholder='Ваше имя')
+          input.call-master-form__input(name='call-master-phone' type='text' placeholder='Телефон')
+          input.call-master-form__input(name='call-master-address' type='text' placeholder='Адрес')
+          textarea.call-master-form__textarea(name='call-master-ext' placeholder='Опишите, что случилось')
+          .call-master-form__submit
+            input.utp-button(type='submit' value='Вызвать мастера') 
+// /Вызвать мастера
+
+// Заказать звонок
+.modal.fade#callBack(tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true")
+  .modal-dialog
+    .modal-content
+      .modal-header
+        h5.modal-title Заказать звонок
+        button.close(data-dismiss='modal' aria-label='close')
+          span(aria-hidden='true') &times;
+      .modal-body
+        form.call-master-form
+          input.call-master-form__input(name='call-master-name' type='text' placeholder='Ваше имя')
+          input.call-master-form__input(name='call-master-phone' type='text' placeholder='Телефон')
+          .call-back-form__submit
+            input.any-questions__button(type='submit' value='Заказать звонок') 
+// /Заказать звонок
+          
+
+// /Модальные окна

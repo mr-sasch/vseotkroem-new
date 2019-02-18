@@ -1,0 +1,36 @@
+extends ../templates/simple-page
+
+block header
+  header.header.header-main
+    include prices-header
+
+block content
+  section.simple-page-content
+    .container
+      +titleStrokeCenter('Цены')
+      p.simple-page-content__p Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях.
+      section.prices
+        .container
+          header
+            .row.prices__header              
+              .col-6.col-sm-4
+                .prices__header-ttl Услуга
+              .col-6.col-sm-4
+                .prices__header-value Цена
+          article.prices__values
+            mixin priceItem(ttl, val)
+              .row.d-flex.align-items-center.prices__values-row                  
+                .col-6.col-sm-4
+                  .prices__values-ttl= ttl
+                .col-6.col-sm-4
+                  .prices__values-value= val
+                .col-12.col-sm-4.text-center.text-sm-right.mt-2.mt-sm-0
+                  button.prices__values-btn(data-toggle='modal' data-target='#callMaster') Вызвать мастера
+            +priceItem('Вскрытие дверей', '20 руб.')
+            +priceItem('Офисы и склады', '20 руб.')
+            +priceItem('Коттеджи и гаражи', '20 руб.')
+            +priceItem('Вскрытие дверей', '20 руб.')
+            +priceItem('Офисы и склады', '20 руб.')
+            +priceItem('Коттеджи и гаражи', '20 руб.')
+        
+        

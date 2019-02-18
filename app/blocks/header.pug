@@ -1,0 +1,129 @@
+include mixins
+
+.container
+  //- Нав меню мобильное
+  .nav-mobile-wrapper
+    nav.nav-mobile
+      ul
+        mixin navMobileItem(href, title, isActive)
+          li.nav-mobile__item(class= isActive)
+            a.nav-mobile__item-a(href= href)= title
+        +navMobileItem('main.html', 'Главная')
+        +navMobileItem('services.html', 'Услуги')
+        +navMobileItem('prices.html', 'Цены')
+        +navMobileItem('contacts.html', 'Контакты')
+  //- Кнопка мобильного меню
+  .nav-mobile__label
+    .nav-mobile__label-stroke.nav-mobile__label-stroke-1
+    .nav-mobile__label-stroke.nav-mobile__label-stroke-2
+    .nav-mobile__label-stroke.nav-mobile__label-stroke-3
+  //- /Кнопка мобильного меню  
+  //- Кнопка "Вверх"
+  button.scroll-top  
+  //- /Кнопка "Вверх"
+
+
+  //- /Нав меню мобильное
+
+  .d-flex.justify-content-center
+    //- Нав меню основное
+    .nav-desktop
+      +navMenu()
+    //- /Нав меню основное
+
+    //- Лого
+  section.header__logo
+    img.header__logo-img(src='images/logo300.png')
+    //- /Лого
+  block headerUtp
+  .d-flex.justify-content-center
+    section.tabs
+      ul.tabs-btns
+        mixin bynItem(txt, isActive)
+          li.tabs-btns__item(class= isActive)= txt
+        +bynItem('Вскрытие дверей', 'active')
+        +bynItem('Вскрытие автомобилей')
+        +bynItem('Вскрытие сейфов')
+        +bynItem('Замена и ремонт замков')
+      //- Табы услуг
+      section.tabs-content
+        ul.tabs-content__tab.active
+          li.tabs-content__tab-item
+            a.tabs-content__tab-item-a(href='') Квартиры
+          li.tabs-content__tab-item 
+            a.tabs-content__tab-item-a(href='') Офисы и склады
+          li.tabs-content__tab-item 
+            a.tabs-content__tab-item-a(href='') Коттеджи и гаражи
+        ul.tabs-content__tab
+          li.tabs-content__tab-item 
+            a.tabs-content__tab-item-a(href='') Замки
+          li.tabs-content__tab-item 
+            a.tabs-content__tab-item-a(href='') Двери и багажники
+          li.tabs-content__tab-item 
+            a.tabs-content__tab-item-a(href='') Вскрытие капотов
+        ul.tabs-content__tab
+          li.tabs-content__tab-item 
+            a.tabs-content__tab-item-a(href='') С деньгами
+          li.tabs-content__tab-item 
+            a.tabs-content__tab-item-a(href='') С ценными бумагами
+          li.tabs-content__tab-item 
+            a.tabs-content__tab-item-a(href='') С забытыми внутри ключами
+        ul.tabs-content__tab
+          li.tabs-content__tab-item 
+            a.tabs-content__tab-item-a(href='') Квартирных
+          li.tabs-content__tab-item 
+            a.tabs-content__tab-item-a(href='') Уличных
+          li.tabs-content__tab-item 
+            a.tabs-content__tab-item-a(href='') Межкомнатных
+    //- Мобильные табы
+    section.mobile-tabs
+      //- все табы
+      ul.mobile-tabs-btns
+        //- один айтем
+        li.mobile-tabs-btns__item 
+          //- заголовок айтема
+          span.mobile-tabs-btns__item-ttl Вскрытие дверей
+          //- содержимое айтема
+          //- Wrapper
+          .mobile-tabs-content__tab-wrapper
+            //- список вложенных табов
+            ul.mobile-tabs-content__tab
+              li.mobile-tabs-content__tab-item
+                a.mobile-tabs-content__tab-item-a(href='') Квартиры
+              li.mobile-tabs-content__tab-item 
+                a.mobile-tabs-content__tab-item-a(href='') Офисы и склады
+              li.mobile-tabs-content__tab-item 
+                a.mobile-tabs-content__tab-item-a(href='') Коттеджи и гаражи
+            //- /список вложенных табов - конец
+        li.mobile-tabs-btns__item
+          span.mobile-tabs-btns__item-ttl Вскрытие автомобилей
+          .mobile-tabs-content__tab-wrapper
+            ul.mobile-tabs-content__tab
+              li.mobile-tabs-content__tab-item 
+                a.mobile-tabs-content__tab-item-a(href='') Замки
+              li.mobile-tabs-content__tab-item 
+                a.mobile-tabs-content__tab-item-a(href='') Двери и багажники
+              li.mobile-tabs-content__tab-item 
+                a.mobile-tabs-content__tab-item-a(href='') Вскрытие капотов
+        li.mobile-tabs-btns__item
+          span.mobile-tabs-btns__item-ttl Вскрытие сейфов
+          .mobile-tabs-content__tab-wrapper
+            ul.mobile-tabs-content__tab
+              li.mobile-tabs-content__tab-item 
+                a.mobile-tabs-content__tab-item-a(href='') С деньгами
+              li.mobile-tabs-content__tab-item 
+                a.mobile-tabs-content__tab-item-a(href='') С ценными бумагами
+              li.mobile-tabs-content__tab-item 
+                a.mobile-tabs-content__tab-item-a(href='') С забытыми внутри ключами
+        li.mobile-tabs-btns__item
+          span.mobile-tabs-btns__item-ttl Замена и ремонт замков
+          .mobile-tabs-content__tab-wrapper
+            ul.mobile-tabs-content__tab
+              li.mobile-tabs-content__tab-item 
+                a.mobile-tabs-content__tab-item-a(href='') Квартирных
+              li.mobile-tabs-content__tab-item 
+                a.mobile-tabs-content__tab-item-a(href='') Уличных
+              li.mobile-tabs-content__tab-item 
+                a.mobile-tabs-content__tab-item-a(href='') Межкомнатных
+    //- Мобильные табы
+  
