@@ -25,3 +25,94 @@ mixin titleStrokeRight(ttl)
 
 //- /Навигационное меню
   
+mixin tabs()
+  .d-flex.justify-content-center
+    section.tabs
+      ul.tabs-btns
+        mixin bynItem(txt, isActive)
+          li.tabs-btns__item(class= isActive)= txt
+        +bynItem('Вскрытие дверей', 'active')
+        +bynItem('Вскрытие автомобилей')
+        +bynItem('Вскрытие сейфов')
+        +bynItem('Замена и ремонт замков')
+      //- Табы услуг
+      section.tabs-content
+        ul.tabs-content__tab.active
+          li.tabs-content__tab-item
+            a.tabs-content__tab-item-a(href='services-flats.html') Квартиры
+          li.tabs-content__tab-item 
+            a.tabs-content__tab-item-a(href='services-offices.html') Офисы и склады
+          li.tabs-content__tab-item 
+            a.tabs-content__tab-item-a(href='services-garages.html') Коттеджи и гаражи
+        ul.tabs-content__tab
+          li.tabs-content__tab-item 
+            a.tabs-content__tab-item-a(href='services-auto-doors.html') Открытие дверей авто всех марок
+          li.tabs-content__tab-item 
+            a.tabs-content__tab-item-a(href='services-auto-baggage.html') Открытие багажников и капотов
+          li.tabs-content__tab-item 
+            a.tabs-content__tab-item-a(href='services-auto-akb.html') Зарядка АКБ и запуск авто
+        ul.tabs-content__tab
+          li.tabs-content__tab-item 
+            a.tabs-content__tab-item-a(href='services-safe-unlock.html') Вскрытие любых сейфов
+          li.tabs-content__tab-item 
+            a.tabs-content__tab-item-a(href='services-safe-repair.html') Замена и ремонт сейфовых замков
+          li.tabs-content__tab-item 
+            a.tabs-content__tab-item-a(href='services-safe-keys.html') Изготовление ключей для сейфов
+        ul.tabs-content__tab
+          li.tabs-content__tab-item 
+            a.tabs-content__tab-item-a(href='services-doorslock-replacement.html') Замена дверных замков
+          li.tabs-content__tab-item 
+            a.tabs-content__tab-item-a(href='services-doorslock-repair.html') Ремонт замков и дверей
+          li.tabs-content__tab-item 
+            a.tabs-content__tab-item-a(href='services-doorslock-choice.html') Большой выбор замков
+    //- Мобильные табы
+    section.mobile-tabs
+      //- все табы
+      ul.mobile-tabs-btns
+        //- один айтем
+        li.mobile-tabs-btns__item 
+          //- заголовок айтема
+          span.mobile-tabs-btns__item-ttl Вскрытие дверей
+          //- содержимое айтема
+          //- Wrapper
+          .mobile-tabs-content__tab-wrapper
+            //- список вложенных табов
+            ul.mobile-tabs-content__tab
+              li.mobile-tabs-content__tab-item
+                a.mobile-tabs-content__tab-item-a(href='services-flats.html') Квартиры
+              li.mobile-tabs-content__tab-item 
+                a.mobile-tabs-content__tab-item-a(href='services-offices.html') Офисы и склады
+              li.mobile-tabs-content__tab-item 
+                a.mobile-tabs-content__tab-item-a(href='services-garages.html') Коттеджи и гаражи
+            //- /список вложенных табов - конец
+        li.mobile-tabs-btns__item
+          span.mobile-tabs-btns__item-ttl Вскрытие автомобилей
+          .mobile-tabs-content__tab-wrapper
+            ul.mobile-tabs-content__tab
+              li.mobile-tabs-content__tab-item 
+                a.mobile-tabs-content__tab-item-a(href='services-auto-doors.html') Замки
+              li.mobile-tabs-content__tab-item 
+                a.mobile-tabs-content__tab-item-a(href='services-auto-baggage.html') Двери и багажники
+              li.mobile-tabs-content__tab-item 
+                a.mobile-tabs-content__tab-item-a(href='services-auto-akb.html') Вскрытие капотов
+        li.mobile-tabs-btns__item
+          span.mobile-tabs-btns__item-ttl Вскрытие сейфов
+          .mobile-tabs-content__tab-wrapper
+            ul.mobile-tabs-content__tab
+              li.mobile-tabs-content__tab-item 
+                a.mobile-tabs-content__tab-item-a(href='services-safe-unlock.html') С деньгами
+              li.mobile-tabs-content__tab-item 
+                a.mobile-tabs-content__tab-item-a(href='services-safe-repair.html') С ценными бумагами
+              li.mobile-tabs-content__tab-item 
+                a.mobile-tabs-content__tab-item-a(href='services-safe-keys.html') С забытыми внутри ключами
+        li.mobile-tabs-btns__item
+          span.mobile-tabs-btns__item-ttl Замена и ремонт замков
+          .mobile-tabs-content__tab-wrapper
+            ul.mobile-tabs-content__tab
+              li.mobile-tabs-content__tab-item 
+                a.mobile-tabs-content__tab-item-a(href='services-doorslock-replacement.html') Квартирных
+              li.mobile-tabs-content__tab-item 
+                a.mobile-tabs-content__tab-item-a(href='services-doorslock-repair.html') Уличных
+              li.mobile-tabs-content__tab-item 
+                a.mobile-tabs-content__tab-item-a(href='services-doorslock-choice.html') Межкомнатных
+  //- Мобильные табы

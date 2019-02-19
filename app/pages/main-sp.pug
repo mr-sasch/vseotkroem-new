@@ -1,11 +1,17 @@
-extends ../templates/simple-page.pug
+extends ../templates/simple-page-sp.pug
+
+include ../blocks/mixins
+  
+
 
 block header
   header.header.header-main
-    include main-header
+    include main-header-sp
 
 block content
   section.why-us
+    +tabs()
+    hr(style='padding-top: 20px')
     .container
       +titleStrokeCenter('Почему мы?')
       .section.why-us__item
@@ -60,13 +66,31 @@ block content
           +mainPricesItem('Вскрытие отечественного звонка', 'images/main-prices.png', 'от 20 рублей')
           +mainPricesItem('Вскрытие отечественного звонка', 'images/main-prices.png', 'от 20 рублей')
 block seoText
-  section.seo-text
+  section.simple-page-content
     .container
-      article
-        header
-          +titleStrokeCenter('Заголовок статьи')
-        img.seo-text__img(src='images/main-article-key.png')
-        section.seo-text__text
-          p Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. При создании генератора мы использовали небезизвестный универсальный код речей. Текст генерируется абзацами случайным образом от двух до десяти предложений в абзаце, что позволяет сделать текст более привлекательным и живым для визуально-слухового восприятия.
-          p По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает у некторых людей недоумение при попытках прочитать рыбу текст. В отличии от lorem ipsum, текст рыба на русском языке наполнит любой макет непонятным смыслом ипридаст неповторимый колорит советских времен.
+      .row.flex-column-reverse.flex-md-row
+        .col-12.col-md-6
+          iframe.adress-frame(src="https://yandex.by/map-widget/v1/-/CBFNJEgeCD" width="100%" height="100%" frameborder="1" allowfullscreen="true")
+        .col-12.col-md-6.mb-4.mb-md-0
+          +titleStrokeRight('Контакты')
+          section.adress
+            mixin adress(ttl, txt)
+              article.adress__article.d-flex.flex-row.flex-wrap
+                header.adress__article-header= ttl
+                p.adress__article-p= txt
+            +adress('Email:', 'zamokvscroem@mail.ru')
+            +adress('Телефон:', '8 (029) 123 45 67')
+            +adress('Адрес:', 'Минск, ул.Красная д.11')
+            +adress('Режим работы:', 'с 8:00 до 20:00')
+            p.adress__text Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке. Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев 
+  
+  //- section.seo-text
+  //-   .container
+  //-     article
+  //-       header
+  //-         +titleStrokeCenter('Заголовок статьи')
+  //-       img.seo-text__img(src='images/main-article-key.png')
+  //-       section.seo-text__text
+  //-         p Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. При создании генератора мы использовали небезизвестный универсальный код речей. Текст генерируется абзацами случайным образом от двух до десяти предложений в абзаце, что позволяет сделать текст более привлекательным и живым для визуально-слухового восприятия.
+  //-         p По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает у некторых людей недоумение при попытках прочитать рыбу текст. В отличии от lorem ipsum, текст рыба на русском языке наполнит любой макет непонятным смыслом ипридаст неповторимый колорит советских времен.
       
