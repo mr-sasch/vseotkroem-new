@@ -2,16 +2,35 @@ extends ../templates/simple-page-sp.pug
 
 include ../blocks/mixins
   
-
+mixin prices()
+  section.main-prices
+    .container
+      +titleStrokeCenter('Услуги')
+      .main-prices-item_row
+        .row
+          mixin mainPricesItem(header, img, footer)
+            .col-12.col-md-6.col-lg-3
+              section.main-prices-item
+                header.main-prices-item__header= header
+                img.main-prices-item__img(src= img)
+                footer.main-prices-item__footer= footer
+                .main-prices-item__button-wrapper
+                  button.main-prices-item__button Подробнее
+          +mainPricesItem('Вскрытие отечественного звонка', 'images/main-prices.png', 'от 20 рублей')
+          +mainPricesItem('Вскрытие отечественного звонка', 'images/main-prices.png', 'от 20 рублей')
+          +mainPricesItem('Вскрытие отечественного звонка', 'images/main-prices.png', 'от 20 рублей')
+          +mainPricesItem('Вскрытие отечественного звонка', 'images/main-prices.png', 'от 20 рублей')
 
 block header
   header.header.header-main.header-sp
     include ../blocks/main-header-sp
 
 block content
+  +prices()
   section.why-us
-    +tabs()
-    hr(style='padding-top: 20px')
+    //- +tabs()
+    //- hr(style='padding-top: 20px')
+    hr(style='padding-top: 0')
     .container
       +titleStrokeCenter('Почему мы?')
       .section.why-us__item
@@ -47,24 +66,7 @@ block content
               .why-us__item-article
                 h1.why-us__item-article-header-h1 Срочный приезд за 15 минут
                 p.why-us__item-article-p Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке
-              
-  section.main-prices
-    .container
-      +titleStrokeCenter('Цены')
-      .main-prices-item_row
-        .row
-          mixin mainPricesItem(header, img, footer)
-            .col-12.col-md-6.col-lg-3
-              section.main-prices-item
-                header.main-prices-item__header= header
-                img.main-prices-item__img(src= img)
-                footer.main-prices-item__footer= footer
-                .main-prices-item__button-wrapper
-                  button.main-prices-item__button Подробнее
-          +mainPricesItem('Вскрытие отечественного звонка', 'images/main-prices.png', 'от 20 рублей')
-          +mainPricesItem('Вскрытие отечественного звонка', 'images/main-prices.png', 'от 20 рублей')
-          +mainPricesItem('Вскрытие отечественного звонка', 'images/main-prices.png', 'от 20 рублей')
-          +mainPricesItem('Вскрытие отечественного звонка', 'images/main-prices.png', 'от 20 рублей')
+  //- +prices()
 block seoText
   section.simple-page-content
     .container
