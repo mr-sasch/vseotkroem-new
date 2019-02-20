@@ -390,7 +390,7 @@ body {
   position: fixed;
   bottom: 15px;
   right: 15px;
-  background: transparent;
+  background: #fff;
   border: 2px solid #15c394;
   border-radius: 5px;
   height: 40px;
@@ -398,9 +398,6 @@ body {
   opacity: 0;
   z-index: -1;
   transition: 0.2s ease;
-}
-.scroll-top:hover {
-  background: #fff;
 }
 .scroll-top:after {
   content: '';
