@@ -1,0 +1,37 @@
+include mixins
+
+footer.site-footer-sp
+  .container
+    .row.d-flex.align-items-center.pt-4.pb-4
+      //- Нав меню в футере
+      .col-12.col-md-7.col-xl-5.mb-4.mb-md-0
+        .footer-logo.flex-column.flex-sm-row
+          img.footer-logo__img(src='images/logo300.png').mb-3.mb-sm-0 
+          .footer__text
+            p.footer__text-p Круглосуточно
+            p.footer__text-p В любой район Санкт-Петербурга за 15 минут
+      .col-12.col-md-5.col-xl-7.text-right
+        .form__before Вызовите мастера сейчас и получите скидку 
+          span.form-before__span - 300 рублей
+        form.footer-form.flex-column.flex-xl-row
+          input(type='text' placeholder='Ваше имя').footer-form__input
+          input(type='phone' placeholder='Номер телефона').footer-form__input
+          input(type='submit' value='Вызвать мастера').footer-form__submit
+        .form__after Мы вам перезвоним в течение 1 минуты
+      //- /Нав меню в футере
+  //- Разделитель
+  .footer-sp__separ
+  //- /Разделитель
+  .footer-sp__bottom
+    .container
+      .row.d-flex.align-items-center
+        .col-12.col-md-6.text-center.text-md-left.mb-2
+          .copyright Copyright © 2019 vse-torkroem.ru
+        .col-12.col-md-6
+          .dev.text-center.text-md-right
+            a(target='_blank' href='http://web-prolevel.ru/')
+              span.dev__span Разработка сайта
+              img.dev__img(src='images/dev-logo.png')
+      
+  include modals
+script(src='assets/script.js' defer)
