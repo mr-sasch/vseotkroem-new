@@ -1,0 +1,36 @@
+extends ../blocks/header-sp
+  
+block headerUtp
+  .header-top
+    .row
+      // Лого
+      .col-12.col-md-4.text-center.text-md-left
+        img.header__logo-img-sp(src='images/logo300.png')
+      // Текст
+      .col-12.col-md-4
+        p.header-top-p Круглосуточное вскрытие и ремонт всех типов замков в Санкт-Петербурге и Лен. области
+      .col-12.col-md-4
+        .header-phone
+          header.header-phone__header Звоните сейчас!
+          h1.header-phone__number +7 (029) 123 45 67
+          
+        
+    
+  .separator
+  .header-bottom
+    .row
+      .col-12.col-md-8
+        section.header-main-utp.header-main-utp_sp
+          h1.header-main-utp__h1 ЗВОНИТЕ!
+          h1.header-main-utp__h1 МЫ ПОМОЖЕМ ОТКРЫТЬ ЛЮБЫЕ ДВЕРИ! 
+          h2.header-main-utp__h2 БЫСТРО И АККУРАТНО!
+          //- p.header-main-utp__p 8 (029) 123 45 67
+          .header-main-utp__button.header-main-utp__button_sp
+            button.utp-button(data-toggle='modal' data-target='#callMaster') Вызвать мастера
+      .col-12.col-md-4.mt-4.mt-md-0
+        form.header-form
+          header.header-form__header Бесплатная консультация специалиста по телефону
+          input.header-form__input(type='text' placeholder='Ваше имя')
+          input.header-form__input(type='text' placeholder='Номер телефона')
+          input.header-form__submit(type='submit' value='Отправить запрос')
+          footer.header-form__footer Мы перезвоним вам через 1 минуту
