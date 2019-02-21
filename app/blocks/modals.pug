@@ -32,6 +32,22 @@
           .call-back-form__submit
             input.any-questions__button(type='submit' value='Заказать звонок') 
 // /Заказать звонок
+
+// Мастер рядом
+.modal.fade#masterAlmostHere(tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true")
+  .modal-dialog
+    .modal-content
+      .modal-header
+        h5.modal-title Заказать звонок
+        button.close(data-dismiss='modal' aria-label='close')
+          span(aria-hidden='true') &times;
+      .modal-body
+        form.call-master-form
+          input.call-master-form__input(name='call-master-name' type='text' placeholder='Ваше имя')
+          input.call-master-form__input(name='call-master-phone' type='text' placeholder='Телефон')
+          .call-back-form__submit
+            input.any-questions__button(type='submit' value='Заказать звонок') 
+// /Мастер рядом
           
 
 // /Модальные окна
