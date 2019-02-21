@@ -2,31 +2,70 @@ extends ../templates/simple-page-sp.pug
 
 include ../blocks/mixins
   
-mixin prices()
+mixin services()
   section.main-prices
     .container
       +titleStrokeCenter('Услуги')
       .main-prices-item_row
         .row
-          mixin mainPricesItem(header, img, footer)
+          mixin mainPricesItem(header, img, footer, isActive)
             .col-12.col-md-6.col-lg-3
-              section.main-prices-item
+              section.main-prices-item(class= isActive)
                 header.main-prices-item__header= header
                 img.main-prices-item__img(src= img)
                 footer.main-prices-item__footer= footer
                 .main-prices-item__button-wrapper
                   button.main-prices-item__button Подробнее
+          +mainPricesItem('Вскрытие отечественного звонка', 'images/main-prices.png', 'от 20 рублей', 'active')
           +mainPricesItem('Вскрытие отечественного звонка', 'images/main-prices.png', 'от 20 рублей')
           +mainPricesItem('Вскрытие отечественного звонка', 'images/main-prices.png', 'от 20 рублей')
           +mainPricesItem('Вскрытие отечественного звонка', 'images/main-prices.png', 'от 20 рублей')
-          +mainPricesItem('Вскрытие отечественного звонка', 'images/main-prices.png', 'от 20 рублей')
+        section.main-prices__content
+          ul.main-prices__content-ul.active
+            li.main-prices__content-li Замок почтового ящика
+              strong от 250 руб.
+            li.main-prices__content-li Отечественный дверной замок
+              strong от 700 руб.
+            li.main-prices__content-li Импортный дверной замок
+              strong от 1200 руб.
+            li.main-prices__content-li Взломостойкий дверной замок
+              strong от 1800 руб.
+            li.main-prices__content-li Гаражный замок
+              strong от 1300 руб.
+          ul.main-prices__content-ul
+            li.main-prices__content-li Отечественный автомобиль
+              strong от 900 руб.
+            li.main-prices__content-li Импортный автомобиль
+              strong от 1700 руб.
+            li.main-prices__content-li Автомобиль премиум класса
+              strong от 2000 руб.
+            li.main-prices__content-li Багажник, капот, бензобак
+              strong от 1500 руб.
+          ul.main-prices__content-ul
+            li.main-prices__content-li Отечественный сейф
+              strong от 1200 руб.
+            li.main-prices__content-li Импортный сейф
+              strong от 1800 руб.
+            li.main-prices__content-li Электромеханический сейф
+              strong от 2000 руб.
+            li.main-prices__content-li Сейф с двойной защитой
+              strong от 2500 руб.
+          ul.main-prices__content-ul
+            li.main-prices__content-li Замена цилиндра замка
+              strong от 500 руб.
+            li.main-prices__content-li Замена замка б/р двери
+              strong от 1000 руб.
+            li.main-prices__content-li Замена замка с разб. двери
+              strong от 1800 руб.
+            li.main-prices__content-li Перекодировка замка
+              strong от 1500 руб.
 
 block header
   header.header.header-main.header-sp
     include ../blocks/main-header-sp
 
 block content
-  +prices()
+  +services()
   section.why-us
     //- +tabs()
     //- hr(style='padding-top: 20px')
@@ -66,7 +105,7 @@ block content
               .why-us__item-article
                 h1.why-us__item-article-header-h1 Срочный приезд за 15 минут
                 p.why-us__item-article-p Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке
-  //- +prices()
+  //- +services()
 block seoText
   section.simple-page-content
     .container

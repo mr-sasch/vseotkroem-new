@@ -35,3 +35,11 @@ footer.site-footer-sp
       
   include modals
 script(src='assets/script-sp.js' defer)
+script.
+  var setHeightForPrices = (i) => {
+    var priceSection = document.querySelector('.main-prices__content');
+    var uls = document.querySelectorAll('.main-prices__content-ul');
+    var ulHeight = uls[i].offsetHeight;
+    priceSection.style.height = ulHeight + 'px';
+  };
+  setHeightForPrices(0);

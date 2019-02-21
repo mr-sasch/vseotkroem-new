@@ -802,6 +802,24 @@ body {
   margin-top: 3px;
   margin-bottom: 0;
 }
+.main-prices__content {
+  position: relative;
+}
+.main-prices__content-ul {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: -1;
+  transition: 0.2s ease;
+}
+.main-prices__content-ul.active {
+  opacity: 1;
+  z-index: 10;
+}
+.main-prices__content-li strong {
+  margin-left: 5px;
+}
 .header-main {
   background-image: url("../images/main-header.jpg");
   background-size: cover;

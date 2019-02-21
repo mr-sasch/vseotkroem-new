@@ -309,3 +309,50 @@ window.onresize = () => drawLine();
 
 })();
 // /активный пункт меню
+
+// Табы с ценами
+(() => {
+
+  var container = document.querySelector('.main-prices-item_row');
+  var buttons = document.querySelectorAll('.main-prices-item__button');
+  var uls = document.querySelectorAll('.main-prices__content-ul');
+
+  var setActive = (e) => {
+    var target = e.target;
+    if (target.classList.contains('main-prices-item__button')) {
+
+      // Удаляем старые active`ы
+      var activeButtonContainer = document.querySelector('.main-prices-item.active');
+      var activeUl = document.querySelector('.main-prices__content-ul.active');
+      activeButtonContainer.classList.remove('active');
+      activeUl.classList.remove('active');
+
+      for (var i = 0; i < buttons.length; i++) {
+        if (target === buttons[i]) {
+
+          // Добавляем новые active`ы
+          buttons[i].parentNode.parentNode.classList.add('active');
+          uls[i].classList.add('active');
+
+          // Устанавливаем высоту секции
+          var setHeightForPrices = (i) => {
+            var priceSection = document.querySelector('.main-prices__content');
+            var ulHeight = uls[i].offsetHeight;
+            priceSection.style.height = ulHeight + 'px';
+          };
+          setHeightForPrices(i);
+          break;
+        }
+      }
+    }
+  }
+
+  container.onclick = setActive;
+
+
+
+  // window.onload = setHeightForPrices(0);
+
+})();
+
+// /Табы с ценами

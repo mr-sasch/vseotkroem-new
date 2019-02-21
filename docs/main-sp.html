@@ -73,7 +73,7 @@
         <div class="main-prices-item_row">
           <div class="row">
                     <div class="col-12 col-md-6 col-lg-3">
-                      <section class="main-prices-item">
+                      <section class="main-prices-item active">
                         <header class="main-prices-item__header">Вскрытие отечественного звонка</header><img class="main-prices-item__img" src="images/main-prices.png"/>
                         <footer class="main-prices-item__footer">от 20 рублей</footer>
                         <div class="main-prices-item__button-wrapper">
@@ -109,6 +109,33 @@
                       </section>
                     </div>
           </div>
+          <section class="main-prices__content">
+            <ul class="main-prices__content-ul active">
+              <li class="main-prices__content-li">Замок почтового ящика<strong>от 250 руб.</strong></li>
+              <li class="main-prices__content-li">Отечественный дверной замок<strong>от 700 руб.</strong></li>
+              <li class="main-prices__content-li">Импортный дверной замок<strong>от 1200 руб.</strong></li>
+              <li class="main-prices__content-li">Взломостойкий дверной замок<strong>от 1800 руб.</strong></li>
+              <li class="main-prices__content-li">Гаражный замок<strong>от 1300 руб.</strong></li>
+            </ul>
+            <ul class="main-prices__content-ul">
+              <li class="main-prices__content-li">Отечественный автомобиль<strong>от 900 руб.</strong></li>
+              <li class="main-prices__content-li">Импортный автомобиль<strong>от 1700 руб.</strong></li>
+              <li class="main-prices__content-li">Автомобиль премиум класса<strong>от 2000 руб.</strong></li>
+              <li class="main-prices__content-li">Багажник, капот, бензобак<strong>от 1500 руб.</strong></li>
+            </ul>
+            <ul class="main-prices__content-ul">
+              <li class="main-prices__content-li">Отечественный сейф<strong>от 1200 руб.</strong></li>
+              <li class="main-prices__content-li">Импортный сейф<strong>от 1800 руб.</strong></li>
+              <li class="main-prices__content-li">Электромеханический сейф<strong>от 2000 руб.</strong></li>
+              <li class="main-prices__content-li">Сейф с двойной защитой<strong>от 2500 руб.</strong></li>
+            </ul>
+            <ul class="main-prices__content-ul">
+              <li class="main-prices__content-li">Замена цилиндра замка<strong>от 500 руб.</strong></li>
+              <li class="main-prices__content-li">Замена замка б/р двери<strong>от 1000 руб.</strong></li>
+              <li class="main-prices__content-li">Замена замка с разб. двери<strong>от 1800 руб.</strong></li>
+              <li class="main-prices__content-li">Перекодировка замка<strong>от 1500 руб.</strong></li>
+            </ul>
+          </section>
         </div>
       </div>
     </section>
@@ -297,5 +324,14 @@
       <!-- /Модальные окна-->
     </footer>
     <script src="assets/script-sp.js" defer="defer"></script>
+    <script>
+      var setHeightForPrices = (i) => {
+        var priceSection = document.querySelector('.main-prices__content');
+        var uls = document.querySelectorAll('.main-prices__content-ul');
+        var ulHeight = uls[i].offsetHeight;
+        priceSection.style.height = ulHeight + 'px';
+      };
+      setHeightForPrices(0);
+    </script>
   </body>
 </html>
