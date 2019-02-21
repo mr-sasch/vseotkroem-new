@@ -815,15 +815,16 @@ body {
   width: 100%;
   text-align: center;
   font-size: 22px;
-  padding: 40px;
+  padding: 40px 0;
 }
 .main-prices__content-ul.active {
   opacity: 1;
   z-index: 10;
 }
 .main-prices__content-li strong {
-  margin-left: 5px;
+  margin-left: 6px;
   color: #15c394;
+  white-space: nowrap;
 }
 .header-main {
   background-image: url("../images/main-header.jpg");
@@ -905,6 +906,9 @@ body {
   color: #808080;
   text-transform: uppercase;
 }
+.active .main-prices-item__header {
+  font-weight: bold;
+}
 .main-prices-item__img {
   max-width: 70%;
 }
@@ -919,6 +923,7 @@ body {
   left: 50%;
   bottom: 0;
   transform: translate(-50%, 50%);
+  outline: none;
   transition: 0.2s ease;
 }
 .main-prices-item__button {
@@ -928,6 +933,9 @@ body {
   border-radius: 7px;
   background-color: #fff;
   transition: 0.2s ease;
+}
+.main-prices-item__button:focus {
+  outline: none;
 }
 .main-prices-item.active .main-prices-item__button-wrapper {
   padding: 0 7px;

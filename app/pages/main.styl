@@ -86,6 +86,9 @@
   font-size 14px
   color grey
   text-transform uppercase
+.active
+  .main-prices-item__header
+    font-weight bold
 
 .main-prices-item__img
   max-width 70%
@@ -101,6 +104,7 @@
   left 50%
   bottom 0
   transform translate(-50%, 50%)
+  outline none
   trs2()
 
 .main-prices-item__button
@@ -109,8 +113,9 @@
   border 2px solid navColorGreen
   border-radius 7px
   background-color #fff
-  // box-shadow 0 0 11px -2px grey
   trs2()
+.main-prices-item__button:focus
+  outline none
 
 .main-prices-item.active
   .main-prices-item__button-wrapper
@@ -122,7 +127,7 @@
       padding 3px 17px
       border-radius 8px
       box-shadow 0 -3px 11px -3px #808080
-      
+
 .main-prices-item__button-wrapper:hover
   padding 0 7px
   .main-prices-item__button
