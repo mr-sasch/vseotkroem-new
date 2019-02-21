@@ -78,7 +78,7 @@
   trs2()
 
 .main-prices-item:hover
-  // box-shadow 0px -2px 3px 0px grey
+.main-prices-item.active
   box-shadow none
   top 1px
 
@@ -111,11 +111,21 @@
   background-color #fff
   // box-shadow 0 0 11px -2px grey
   trs2()
+
+.main-prices-item.active
+  .main-prices-item__button-wrapper
+    padding 0 7px
+    .main-prices-item__button
+      font-size 19px
+      padding-top 3px
+      padding-bottom 3px
+      padding 3px 17px
+      border-radius 8px
+      box-shadow 0 -3px 11px -3px #808080
+      
 .main-prices-item__button-wrapper:hover
   padding 0 7px
   .main-prices-item__button
-    // background-color navColorGreen
-    // color #fff
     font-size 19px
     padding-top 3px
     padding-bottom 3px

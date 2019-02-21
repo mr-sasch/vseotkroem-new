@@ -349,10 +349,6 @@ window.onresize = () => drawLine();
 
   container.onclick = setActive;
 
-
-
-  // window.onload = setHeightForPrices(0);
-
 })();
 
 // /Табы с ценами
