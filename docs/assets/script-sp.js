@@ -355,5 +355,5 @@ window.onresize = () => drawLine();
 var showModalMasterAllmosHere = () => {
   $('#masterAlmostHere').modal("show");
 }
-setTimeout(showModalMasterAllmosHere, 1000);
+setTimeout(showModalMasterAllmosHere, 3000);
 // $('#masterAlmostHere').modal("show");
