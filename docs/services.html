@@ -234,19 +234,13 @@
       <div class="modal fade" id="masterAlmostHere" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title">Заказать звонок</h5>
-              <button class="close" data-dismiss="modal" aria-label="close"><span aria-hidden="true">&times;</span></button>
-            </div>
-            <div class="modal-body">
-              <form class="call-master-form">
-                <input class="call-master-form__input" name="call-master-name" type="text" placeholder="Ваше имя"/>
-                <input class="call-master-form__input" name="call-master-phone" type="text" placeholder="Телефон"/>
-                <div class="call-back-form__submit">
-                  <input class="any-questions__button" type="submit" value="Заказать звонок"/>
-                </div>
-              </form>
-            </div>
+            <form class="header-form">
+              <header class="header-form__header">Мастер в 3-х километрах от Вас.<br/><span class="masterAlmostHere__span">Оформите вызов, и он будет у Вас через 15 минут.</span></header>
+              <input class="header-form__input" type="text" placeholder="Ваше имя"/>
+              <input class="header-form__input" type="text" placeholder="Номер телефона"/>
+              <input class="header-form__submit" type="submit" value="Отправить данные"/>
+              <footer class="header-form__footer">Мы перезвоним вам через 1 минуту </footer>
+            </form>
           </div>
         </div>
       </div>

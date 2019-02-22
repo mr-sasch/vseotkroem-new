@@ -352,3 +352,8 @@ window.onresize = () => drawLine();
 })();
 
 // /Табы с ценами
+var showModalMasterAllmosHere = () => {
+  $('#masterAlmostHere').modal("show");
+}
+setTimeout(showModalMasterAllmosHere, 1000);
+// $('#masterAlmostHere').modal("show");

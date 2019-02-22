@@ -37,16 +37,29 @@
 .modal.fade#masterAlmostHere(tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true")
   .modal-dialog
     .modal-content
-      .modal-header
-        h5.modal-title Заказать звонок
-        button.close(data-dismiss='modal' aria-label='close')
-          span(aria-hidden='true') &times;
-      .modal-body
-        form.call-master-form
-          input.call-master-form__input(name='call-master-name' type='text' placeholder='Ваше имя')
-          input.call-master-form__input(name='call-master-phone' type='text' placeholder='Телефон')
-          .call-back-form__submit
-            input.any-questions__button(type='submit' value='Заказать звонок') 
+      form.header-form
+        header.header-form__header Мастер в 3-х километрах от Вас.
+          br
+          span.masterAlmostHere__span Оформите вызов, и он будет у Вас через 15 минут.
+        input.header-form__input(type='text' placeholder='Ваше имя')
+        input.header-form__input(type='text' placeholder='Номер телефона')
+        input.header-form__submit(type='submit' value='Отправить данные')
+        footer.header-form__footer Мы перезвоним вам через 1 минуту 
+//- .modal.fade#masterAlmostHere(tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true")
+//-   .modal-dialog
+//-     .modal-content
+//-       .modal-header
+//-         h5.modal-title Мастер в 3х километрах от вас. 
+//-           br
+//-           span.masterAlmostHere__span Оформите вызов, и он будет у Вас через 15 минут.
+//-         //- button.close(data-dismiss='modal' aria-label='close')
+//-         //-   span(aria-hidden='true') &times;
+//-       .modal-body
+//-         form.call-master-form
+//-           input.call-master-form__input(name='call-master-name' type='text' placeholder='Ваше имя')
+//-           input.call-master-form__input(name='call-master-phone' type='text' placeholder='Телефон')
+//-           .call-back-form__submit
+//-             input.any-questions__button(type='submit' value='Заказать звонок') 
 // /Мастер рядом
           
 
