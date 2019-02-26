@@ -881,6 +881,32 @@ body {
 .main-prices-item__img {
   padding: 30px 0;
 }
+.prices-item-mobile-1st-reserve,
+.prices-item-mobile-2nd-reserve,
+.prices-item-mobile {
+  padding: 0;
+  transition: 0.2s ease;
+}
+.prices-item-mobile-1st-reserve.active,
+.prices-item-mobile-2nd-reserve.active,
+.prices-item-mobile.active {
+  padding-bottom: 70px;
+  z-index: 10;
+}
+.prices-item-mobile-1st-reserve,
+.prices-item-mobile-2nd-reserve,
+.prices-item-mobile {
+  z-index: -1;
+}
+.prices-item-mobile-1st-reserve .main-prices__content-ul,
+.prices-item-mobile-2nd-reserve .main-prices__content-ul,
+.prices-item-mobile .main-prices__content-ul {
+  position: relative;
+  border: 1px solid #15c394;
+  box-shadow: 5px 5px 15px -10px #808080;
+  border-radius: 10px;
+  background-color: rgba(211,211,211,0.278);
+}
 .header-main {
   background-image: url("../images/main-header.jpg");
   background-size: cover;
@@ -950,11 +976,25 @@ body {
   margin-bottom: 40px;
   box-shadow: 0px -3px 14px #808080;
   transition: 0.2s ease;
+  cursor: pointer;
 }
 .main-prices-item:hover,
 .main-prices-item.active {
   box-shadow: none;
   top: 1px;
+}
+.main-prices-item:hover .main-prices-item__button-wrapper,
+.main-prices-item.active .main-prices-item__button-wrapper {
+  padding: 0 7px;
+}
+.main-prices-item:hover .main-prices-item__button-wrapper .main-prices-item__button,
+.main-prices-item.active .main-prices-item__button-wrapper .main-prices-item__button {
+  font-size: 19px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding: 3px 17px;
+  border-radius: 8px;
+  box-shadow: 0 -3px 11px -3px #808080;
 }
 .main-prices-item__header {
   font-size: 14px;
@@ -996,17 +1036,6 @@ body {
   padding: 0 7px;
 }
 .main-prices-item.active .main-prices-item__button-wrapper .main-prices-item__button {
-  font-size: 19px;
-  padding-top: 3px;
-  padding-bottom: 3px;
-  padding: 3px 17px;
-  border-radius: 8px;
-  box-shadow: 0 -3px 11px -3px #808080;
-}
-.main-prices-item__button-wrapper:hover {
-  padding: 0 7px;
-}
-.main-prices-item__button-wrapper:hover .main-prices-item__button {
   font-size: 19px;
   padding-top: 3px;
   padding-bottom: 3px;

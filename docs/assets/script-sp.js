@@ -313,13 +313,108 @@ window.onresize = () => drawLine();
 // Табы с ценами
 (() => {
 
-  var container = document.querySelector('.main-prices-item_row');
+  var container = document.querySelector('.main-prices-item-wrapper');
   var buttons = document.querySelectorAll('.main-prices-item__button');
-  var uls = document.querySelectorAll('.main-prices__content-ul');
+  var block = document.querySelectorAll('.main-prices-item');
+  var uls = document.querySelectorAll('.main-prices__content .main-prices__content-ul');
+  var itemMobile = document.querySelectorAll('.prices-item-mobile');
 
   var setActive = (e) => {
     var target = e.target;
-    if (target.classList.contains('main-prices-item__button')) {
+
+    // Проверка
+    while(target!=this) {
+      if(target.classList.contains('row')) return;
+      if(target.classList.contains('main-prices-item')) break;
+      target = target.parentNode;
+    }
+    if(target == this) return;
+    // /Проверка
+
+    if (target.classList.contains('main-prices-item')) {
+
+      // Удаляем старые active`ы
+      var activeButtonContainer = document.querySelector('.main-prices-item.active');
+      var activeUl = document.querySelector('.main-prices__content .main-prices__content-ul.active');
+      activeButtonContainer.classList.remove('active');
+      activeUl.classList.remove('active');
+
+      var itemMobile1reserve = document.querySelector('.prices-item-mobile-1st-reserve');
+      var itemMobile2reserve = document.querySelector('.prices-item-mobile-2nd-reserve');
+      itemMobile1reserve.innerHTML = '';
+      itemMobile2reserve.innerHTML = '';
+      itemMobile1reserve.classList.remove('active');
+      itemMobile2reserve.classList.remove('active');
+
+      var itemMobileActive = document.querySelectorAll('.prices-item-mobile.active');
+      for (var z = 0; z < itemMobileActive.length; z++) {
+        itemMobileActive[z].innerHTML = '';
+        itemMobileActive[z].classList.remove('active');
+      }
+
+
+
+
+      for (var i = 0; i < buttons.length; i++) {
+        if (target === block[i]) {
+
+          // Добавляем новые active`ы
+          buttons[i].parentNode.parentNode.classList.add('active');
+          uls[i].classList.add('active');
+
+          // itemMobile[i].classList.add('active');
+
+          if (i == 0) {
+            itemMobile[0].classList.add('active');
+            var itemMobile1reserve = document.querySelector('.prices-item-mobile-1st-reserve');
+            itemMobile1reserve.classList.add('active');
+          } else if (i == 2) {
+            itemMobile[2].classList.add('active');
+            var itemMobile2reserve = document.querySelector('.prices-item-mobile-2nd-reserve');
+            itemMobile1reserve.classList.add('active');
+          } else {
+            itemMobile[i].classList.add('active');
+          }
+
+          // Устанавливаем высоту секции
+          var setHeightForPrices = (i) => {
+            var priceSection = document.querySelector('.main-prices__content');
+            var ulHeight = uls[i].offsetHeight;
+            priceSection.style.height = ulHeight + 'px';
+          };
+          setHeightForPrices(i);
+          break;
+        }
+      }
+
+      // Клонируем и добавляем мобильный блок
+
+      var newActiveUl = document.querySelector('.main-prices__content .main-prices__content-ul.active');
+      var newItemMobileActive = document.querySelector('.prices-item-mobile.active');
+
+      if (i == 0) {
+        var clonedNewActiveUl = newActiveUl.cloneNode(true);
+        itemMobile1reserve.appendChild(clonedNewActiveUl);
+        var clonedNewActiveUl = newActiveUl.cloneNode(true);
+        newItemMobileActive.appendChild(clonedNewActiveUl);
+      } else if (i == 2) {
+        var clonedNewActiveUl = newActiveUl.cloneNode(true);
+        itemMobile2reserve.appendChild(clonedNewActiveUl);
+        var clonedNewActiveUl = newActiveUl.cloneNode(true);
+        newItemMobileActive.appendChild(clonedNewActiveUl);
+      } else {
+        var clonedNewActiveUl = newActiveUl.cloneNode(true);
+        newItemMobileActive.appendChild(clonedNewActiveUl);
+      }
+      // /Клонируем и добавляем мобильный блок
+
+
+    }
+  }
+
+  var setActive2 = (e) => {
+    var target = e.target;
+    if (target.classList.contains('main-prices-item')) {
 
       // Удаляем старые active`ы
       var activeButtonContainer = document.querySelector('.main-prices-item.active');
@@ -328,7 +423,7 @@ window.onresize = () => drawLine();
       activeUl.classList.remove('active');
 
       for (var i = 0; i < buttons.length; i++) {
-        if (target === buttons[i]) {
+        if (target === block[i]) {
 
           // Добавляем новые active`ы
           buttons[i].parentNode.parentNode.classList.add('active');
@@ -348,10 +443,54 @@ window.onresize = () => drawLine();
   }
 
   container.onclick = setActive;
+  block.onclick = setActive2;
 
 })();
-
 // /Табы с ценами
+
+// (() => {
+//
+//   var container = document.querySelector('.main-prices-item_row');
+//   var buttons = document.querySelectorAll('.main-prices-item__button');
+//   var uls = document.querySelectorAll('.main-prices__content-ul');
+//
+//   var setActive = (e) => {
+//     var target = e.target;
+//     if (target.classList.contains('main-prices-item__button')) {
+//
+//       // Удаляем старые active`ы
+//       var activeButtonContainer = document.querySelector('.main-prices-item.active');
+//       var activeUl = document.querySelector('.main-prices__content-ul.active');
+//       activeButtonContainer.classList.remove('active');
+//       activeUl.classList.remove('active');
+//
+//       for (var i = 0; i < buttons.length; i++) {
+//         if (target === buttons[i]) {
+//
+//           // Добавляем новые active`ы
+//           buttons[i].parentNode.parentNode.classList.add('active');
+//           uls[i].classList.add('active');
+//
+//           // Устанавливаем высоту секции
+//           var setHeightForPrices = (i) => {
+//             var priceSection = document.querySelector('.main-prices__content');
+//             var ulHeight = uls[i].offsetHeight;
+//             priceSection.style.height = ulHeight + 'px';
+//           };
+//           setHeightForPrices(i);
+//           break;
+//         }
+//       }
+//     }
+//   }
+//
+//   container.onclick = setActive;
+//
+// })();
+
+
+
+
 var showModalMasterAllmosHere = () => {
   $('#masterAlmostHere').modal("show");
 }

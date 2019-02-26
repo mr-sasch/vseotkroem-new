@@ -76,11 +76,21 @@
   margin-bottom 40px
   box-shadow 0px -3px 14px grey
   trs2()
+  cursor pointer
 
 .main-prices-item:hover
 .main-prices-item.active
   box-shadow none
   top 1px
+  .main-prices-item__button-wrapper
+    padding 0 7px
+    .main-prices-item__button
+      font-size 19px
+      padding-top 3px
+      padding-bottom 3px
+      padding 3px 17px
+      border-radius 8px
+      box-shadow 0 -3px 11px -3px #808080
 
 .main-prices-item__header
   font-size 14px
@@ -128,15 +138,6 @@
       border-radius 8px
       box-shadow 0 -3px 11px -3px #808080
 
-.main-prices-item__button-wrapper:hover
-  padding 0 7px
-  .main-prices-item__button
-    font-size 19px
-    padding-top 3px
-    padding-bottom 3px
-    padding 3px 17px
-    border-radius 8px
-    box-shadow 0 -3px 11px -3px #808080
   // /Ячейки с ценами
 
   // Адаптация

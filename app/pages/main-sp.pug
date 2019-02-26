@@ -7,20 +7,35 @@ mixin services()
     .container
       +titleStrokeCenter('Услуги')
       .main-prices-item_row
-        .row
-          mixin mainPricesItem(header, img, footer, isActive)
-            .col-12.col-md-6.col-lg-3
-              section.main-prices-item(class= isActive)
-                header.main-prices-item__header= header
-                img.main-prices-item__img(src= img)
-                footer.main-prices-item__footer= footer
-                .main-prices-item__button-wrapper
-                  button.main-prices-item__button Подробнее
-          +mainPricesItem('Вскрытие замков', 'images/main-prices.png', 'от 250 рублей', 'active')
-          +mainPricesItem('Вскрытие автомобиля', 'images/unlock-cars.png', 'от 900 рублей')
-          +mainPricesItem('Вскрытие сейфа', 'images/unlock-safe.png', 'от 1200 рублей')
-          +mainPricesItem('Замена дверного замка', 'images/unlock-door-lock.png', 'от 500 рублей')
-        section.main-prices__content
+        .main-prices-item-wrapper
+          .row
+            mixin mainPricesItem(header, img, footer, isActive)
+              .col-12.col-md-6.col-lg-3.main-prices__content-bootstrap
+                section.main-prices-item(class= isActive)
+                  header.main-prices-item__header= header
+                  img.main-prices-item__img(src= img)
+                  footer.main-prices-item__footer= footer
+                  .main-prices-item__button-wrapper
+                    button.main-prices-item__button Подробнее
+            +mainPricesItem('Вскрытие замков', 'images/main-prices.png', 'от 250 рублей', 'active')
+            .col-12.d-block.d-md-none
+              .prices-item-mobile
+            +mainPricesItem('Вскрытие автомобиля', 'images/unlock-cars.png', 'от 900 рублей')
+            .col-12.d-block.d-lg-none
+              .prices-item-mobile
+            .col-12.d-none.d-md-block.d-lg-none
+              .prices-item-mobile-1st-reserve
+            +mainPricesItem('Вскрытие сейфа', 'images/unlock-safe.png', 'от 1200 рублей')
+            .col-12.d-block.d-md-none
+              .prices-item-mobile
+            +mainPricesItem('Замена дверного замка', 'images/unlock-door-lock.png', 'от 500 рублей')
+            .col-12.d-block.d-lg-none
+              .prices-item-mobile
+            .col-12.d-none.d-md-block.d-lg-none
+              .prices-item-mobile-2nd-reserve
+        //- Секции
+        //- section.main-prices__content
+        section.main-prices__content.d-none.d-lg-block
           ul.main-prices__content-ul.active
             li.main-prices__content-li Замок почтового ящика
               strong от 250 руб.
@@ -105,7 +120,6 @@ block content
               .why-us__item-article
                 h1.why-us__item-article-header-h1 Срочный приезд за 15 минут
                 p.why-us__item-article-p Мы всегда готовы придти к вам на помощь, операторы проведут исчерпывающую консультацию и мастер прибудет в самые кротчайшие сроки.
-  //- +services()
 block seoText
   section.simple-page-content
     .container
@@ -124,14 +138,3 @@ block seoText
             +adress('Адрес:', 'пос. Мурино, ул Шоссе в Лаврики, 55')
             +adress('Режим работы:', 'круглосуточно')
             p.adress__text Компания "ЗамокПрофи" работает круглосуточно и без выходных. Наши специалисты в любое время готовы помочь вам в сложной ситуации. Получить консультацию можно любым удобным для вас - по телефону, электронной почте, либо подъехав к нам в офис, по указанному в контактах адресу.
-  
-  //- section.seo-text
-  //-   .container
-  //-     article
-  //-       header
-  //-         +titleStrokeCenter('Заголовок статьи')
-  //-       img.seo-text__img(src='images/main-article-key.png')
-  //-       section.seo-text__text
-  //-         p Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. При создании генератора мы использовали небезизвестный универсальный код речей. Текст генерируется абзацами случайным образом от двух до десяти предложений в абзаце, что позволяет сделать текст более привлекательным и живым для визуально-слухового восприятия.
-  //-         p По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает у некторых людей недоумение при попытках прочитать рыбу текст. В отличии от lorem ipsum, текст рыба на русском языке наполнит любой макет непонятным смыслом ипридаст неповторимый колорит советских времен.
-      
